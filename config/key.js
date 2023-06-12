@@ -1,6 +1,8 @@
-console.log('process.env.NODE_ENV => ' + process.env)
-if(process.env.NODE_ENV==='production'){
+console.log('process.env.NODE_ENV => ' + process.env.NODE_ENV)
+if(process.env.NODE_ENV==='proc'){
     module.exports=require('./prod');
-}else{
+}else if(process.env.NODE_ENV==='dev'){
     module.exports=require('./dev');
+}else{
+    module.exports=require('./dev');    
 }
